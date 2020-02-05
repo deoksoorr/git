@@ -36,10 +36,10 @@ insert into emp1 values (emp1_seq.nextval,'김덕수','deoksoo','1234','deoksoo@gma
 insert into emp1 values (emp1_seq.nextval,'고재현', 'jaehyun', '1234', 'jaehyun@gmail.com','01022221111','영업팀','비트특별시 캠프구 자바대로18길 123-2',sysdate);
 insert into emp1 values (emp1_seq.nextval,'장인영', 'inyoung', '1234', 'inyoung@gmail.com','01033331111','회계팀','비트특별시 캠프구 자바대로18길 123-3',sysdate);
 insert into emp1 values (emp1_seq.nextval,'김영조', 'myeonghyo', '1234', 'myeonghyo@gmail.com','01044441111','행정팀','비트특별시 캠프구 자바대로18길 123-4',sysdate);
-insert into emp1 values (emp1_seq.nextval,'츠나데', 'deokja', '1234', 'deokja@gmail.com','01011111112','취업팀','비트특별시 캠프구 자바대로18길 123-5',sysdate);
-insert into emp1 values (emp1_seq.nextval,'카카시', 'jaeduck', '1234', 'jaeduck@gmail.com','01022221134','영업팀','비트특별시 캠프구 자바대로18길 123-2',sysdate);
-insert into emp1 values (emp1_seq.nextval,'히루젠', 'young', '1234', 'young@gmail.com','01033331141','행정팀','비트특별시 캠프구 자바대로18길 123-3',sysdate);
-insert into emp1 values (emp1_seq.nextval,'미나토', 'myeongja', '1234', 'myeongja@gmail.com','01044441115','강사팀','비트특별시 캠프구 자바대로19길 123-4',sysdate);
+insert into emp1 values (emp1_seq.nextval,'서울대교수', 'deokja', '1234', 'deokja@gmail.com','01011111112','취업팀','비트특별시 캠프구 자바대로18길 123-5',sysdate);
+insert into emp1 values (emp1_seq.nextval,'고려대교수', 'jaeduck', '1234', 'jaeduck@gmail.com','01022221134','영업팀','비트특별시 캠프구 자바대로18길 123-2',sysdate);
+insert into emp1 values (emp1_seq.nextval,'연세대교수', 'young', '1234', 'young@gmail.com','01033331141','행정팀','비트특별시 캠프구 자바대로18길 123-3',sysdate);
+insert into emp1 values (emp1_seq.nextval,'열정강사', 'myeongja', '1234', 'myeongja@gmail.com','01044441115','강사팀','비트특별시 캠프구 자바대로19길 123-4',sysdate);
 create table class(
 classnum number primary key,
 classname varchar2(100) not null,
@@ -52,7 +52,7 @@ insert into class values (class_seq.nextval,'미배정','미배정','','');
 insert into class values (class_seq.nextval,'자바반','설민석','2020/01/20','2020/02/01');
 insert into class values (class_seq.nextval,'자바스크립트반','최진기','2020/02/01','2020/02/06');
 insert into class values (class_seq.nextval,'스프링반','최태성','2020/02/06','2020/02/21');
-insert into class values (class_seq.nextval,'디자인반','김덕수','2020/02/06','2020/02/21');
+insert into class values (class_seq.nextval,'디자인반','김덕수','2020/02/05','2020/05/05');
 create table exam (
 examnum number primary key,
 examname varchar2(100),
@@ -72,7 +72,7 @@ insert into exam values (exam_seq.nextval,'미배정','미배정','','','','','','',1)
 insert into exam values (exam_seq.nextval,'자바','설민석','1차',sysdate,'2020/01/27부터2020/02/05까지','자바시험문제출제','','',2);
 insert into exam values (exam_seq.nextval,'자바스크립트','최진기','1차',sysdate,'2020/01/27부터2020/02/05까지','자바스크립트시험문제출제','','',3);
 insert into exam values (exam_seq.nextval,'스프링','최태성','1차',sysdate,'2020/01/27부터2020/02/05까지','스프링시험문제출제','','',4);
-insert into exam values (exam_seq.nextval,'디자인','김덕수','1차',sysdate,'2020/01/27부터2020/02/05까지','김덕수시험문제출제','','',5);
+insert into exam values (exam_seq.nextval,'디자인','김덕수','1차',sysdate,'2020/01/01부터2020/04/01까지','김덕수시험문제출제','','',5);
 create table student (
 stunum number primary key,
 stuid varchar2(30) not null,
@@ -94,13 +94,17 @@ insert into student values (student_seq.nextval,'cooldeoksoo','김덕수','1234','0
 insert into student values (student_seq.nextval,'jeahyunbabo','고재현','1234','01022223333','허걱특별시 희안구 파이썬대로12길 123-1','자바스크립트반','최진기',3,3);
 insert into student values (student_seq.nextval,'inyoungzzang','장인영','1234','0101432132','독립도 만세시 대한대로11길 123-1','스프링반','최태성',4,4);
 insert into student values (student_seq.nextval,'damnharry','유명효','1234','01014312872','어플도 제작시 애플대로14길 123-1','미배정','미배정',1,1);
-insert into student values (student_seq.nextval,'healthykim','나루토','1234','01012112912','수당특별시 내놔구 예쓰대로90길 123-1','미배정','미배정',1,1);
-insert into student values (student_seq.nextval,'josunhero','사스케','1234','01012212532','기타특별시 수당구 여부대로23길 123-1','미배정','미배정',1,1);
-insert into student values (student_seq.nextval,'thiefking1','사쿠라','1234','01033112222','비트특별시 캠프구 스타대로1길 123-1','미배정','미배정',1,1);
-insert into student values (student_seq.nextval,'bronzethief','가아라','1234','01014412222','비트특별시 캠프구 자바대로18길 123-1','미배정','미배정',1,1);
-insert into student values (student_seq.nextval,'silverthief','시카마루','1234','01015512222','비트특별시 캠프구 자바대로18길 123-1','미배정','미배정',1,1);
-insert into student values (student_seq.nextval,'goldthief','가이','1234','01016612222','비트특별시 캠프구 자바대로18길 123-1','미배정','미배정',1,1);
-insert into student values (student_seq.nextval,'yoonsikjoa','히나타','1234','01017712222','비트특별시 캠프구 자바대로18길 123-1','미배정','미배정',1,1);
+insert into student values (student_seq.nextval,'healthykim','정지문','1234','01012112912','수당특별시 내놔구 예쓰대로90길 123-1','미배정','미배정',1,1);
+insert into student values (student_seq.nextval,'josunhero','채우식','1234','01012212532','기타특별시 수당구 여부대로23길 123-1','미배정','미배정',1,1);
+insert into student values (student_seq.nextval,'thiefking1','홍혜리','1234','01033112222','비트특별시 캠프구 스타대로1길 123-1','미배정','미배정',1,1);
+insert into student values (student_seq.nextval,'bronzethief','김진혁','1234','01014412222','비트특별시 캠프구 자바대로18길 123-1','미배정','미배정',1,1);
+insert into student values (student_seq.nextval,'silverthief','이진규','1234','01015512222','비트특별시 캠프구 자바대로18길 123-1','미배정','미배정',1,1);
+insert into student values (student_seq.nextval,'goldthief','김진우','1234','01016612222','비트특별시 캠프구 자바대로18길 123-1','미배정','미배정',1,1);
+insert into student values (student_seq.nextval,'yoonsikjoa','최재만','1234','01011223344','비트특별시 캠프구 자바대로18길 123-1','미배정','미배정',1,1);
+insert into student values (student_seq.nextval,'gwangun','오광은','1234','01022334455','비트특별시 캠프구 자바대로18길 123-1','미배정','미배정',1,1);
+insert into student values (student_seq.nextval,'unjung','김은정','1234','01033445566','비트특별시 캠프구 자바대로18길 123-1','미배정','미배정',1,1);
+insert into student values (student_seq.nextval,'soyul','이소율','1234','01044556677','비트특별시 캠프구 자바대로18길 123-1','미배정','미배정',1,1);
+insert into student values (student_seq.nextval,'hyejin','조혜진','1234','01055667788','비트특별시 캠프구 자바대로18길 123-1','미배정','미배정',1,1);
 create table attendinfo (
 stunum number not null,
 constraint stunum_fk2 foreign key(stunum)
@@ -111,17 +115,21 @@ late number default 0,
 absent number default 0,
 checkpct number default 0
 );
-insert into AttendInfo values (1,40,10,20,20,20);
-insert into AttendInfo values (2,20,20,20,20,20);
-insert into AttendInfo values (3,10,50,20,10,10);
-insert into AttendInfo values (4,10,10,30,10,10);
-insert into AttendInfo values (5,20,20,20,20,20);
-insert into AttendInfo values (6,10,50,20,10,10);
-insert into AttendInfo values (7,10,10,30,10,10);
-insert into AttendInfo values (8,20,20,20,20,20);
-insert into AttendInfo values (9,10,50,20,10,10);
-insert into AttendInfo values (10,10,10,30,10,10);
-insert into AttendInfo values (11,10,10,30,10,10);
+insert into AttendInfo values (1,0,0,0,0,0);
+insert into AttendInfo values (2,0,0,0,0,0);
+insert into AttendInfo values (3,0,0,0,0,0);
+insert into AttendInfo values (4,0,0,0,0,0);
+insert into AttendInfo values (5,0,0,0,0,0);
+insert into AttendInfo values (6,0,0,0,0,0);
+insert into AttendInfo values (7,0,0,0,0,0);
+insert into AttendInfo values (8,0,0,0,0,0);
+insert into AttendInfo values (9,0,0,0,0,0);
+insert into AttendInfo values (10,0,0,0,0,0);
+insert into AttendInfo values (11,0,0,0,0,0);
+insert into AttendInfo values (12,0,0,0,0,0);
+insert into AttendInfo values (13,0,0,0,0,0);
+insert into AttendInfo values (14,0,0,0,0,0);
+insert into AttendInfo values (15,0,0,0,0,0);
 create table attendtime(
 stunum number not null,
 constraint stunum_fk foreign key(stunum)
@@ -141,7 +149,10 @@ insert into attendtime values (8,'','',3);
 insert into attendtime values (9,'','',3);
 insert into attendtime values (10,'','',3);
 insert into attendtime values (11,'','',3);
-
+insert into attendtime values (12,'','',3);
+insert into attendtime values (13,'','',3);
+insert into attendtime values (14,'','',3);
+insert into attendtime values (15,'','',3);
 create table faq (
 faqnum number primary key,
 faqtitle varchar2(100) not null,
@@ -244,3 +255,7 @@ insert into score values (2,8,20,30,40);
 insert into score values (1,9,30,50,90);
 insert into score values (1,10,20,30,40);
 insert into score values (5,11,20,30,40);
+insert into score values (1,12,0,0,0);
+insert into score values (1,13,0,0,0);
+insert into score values (1,14,0,0,0);
+insert into score values (1,15,0,0,0);
